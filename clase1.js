@@ -100,3 +100,20 @@
     console.log("Favor de poner un número mayor a 2");
   }
 }(5));
+
+//extra 2
+(function diagonalInversa(height){
+  var rows=[height];
+  for (var i=0; i<height; i++) {
+    rows[i]="";
+    for (var j=0; j<height; j++) {
+      if (i==height-1-j){
+        rows[i]+="0";
+      }
+      else{
+        rows[i]+="*";
+      }
+    }
+    console.log(rows[i]);
+  }
+}(5));
