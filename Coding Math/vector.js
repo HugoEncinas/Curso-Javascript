@@ -49,7 +49,7 @@ var vector = {
     return vector.create(this._x + v2.getX(), this._y + v2.getY());
   },
 
-  substract: function(v2) {
+  subtract: function(v2) {
     return vector.create(this._x + v2.getX(), this._y - v2.getY());
   },
 
@@ -66,7 +66,7 @@ var vector = {
     this._y += v2.getY();
   },
 
-  substractTo: function(v2) {
+  subtractFrom: function(v2) {
     this._x -= v2.getX();
     this._y -= v2.getY();
   },
