@@ -2,7 +2,7 @@
 
 var height = window.innerHeight;
 var width = window.innerWidth;
-var squareFig = {x: 0, y: 0, color: '#9400D3', size: 2};
+var squareFig = {x: 0, y: 0, color: '#9400D3', size: 20};
 var colors=['#9400D3','#4B0082','#0000FF', '#00FF00', '#FFFF00', '#FF7F00', '#FF0000'];
 
 var i = 0,
