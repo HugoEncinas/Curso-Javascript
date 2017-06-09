@@ -6,24 +6,13 @@ window.onload = function() {
   var grosero = false;
 
   function copy() {
-
     nameCopy.value = name.value;
-
     badWords.forEach(function (word) {
       if(name.value.includes(word)) {
         nameCopy.value = 'Grosero' //Aqui remplazar una de las letras por X
       }
-      else {
-        nameCopy - '';
-      }
     })
   }
-
-
-
-
-
-
 };
 
 //Tarea: EIVH930510HNLNLG05
