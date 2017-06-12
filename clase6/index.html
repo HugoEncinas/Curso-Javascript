@@ -6,12 +6,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <script src="clase6.js"></script>
+  <script src="tarea6.js"></script>
 </head>
 <body>
-  <div class="container">
-    <input id="name" type="text" placeholder="nombre" value="">
-    <input id="nameCopy" type="text" placeholder="nombre" value="">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="firstName" type="text" value="" class="validate">
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="lastNameP" type="text" value="" class="validate">
+          <label for="lastNameP">Paternal Last Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="lastNameM" type="text" value="" class="validate">
+          <label for="lastNameM">Maternal Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="birthday" type="date" class="datepicker">
+          <label for="date">Birthday</label>
+        </div>
+        <div class="input-field col s6">
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="test3"  />
+            <label for="test3">Male</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="test4" />
+            <label for="test4">Female</label>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="CURP" id="curp" type="text" value="" class="validate">
+          <label for="curp" class="active"></label>
+        </div>
+      </div>
+    </form>
   </div>
 </body>
 </html>

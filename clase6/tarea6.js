@@ -1,15 +1,22 @@
 window.onload = function() {
-  var name = document.getElementById('name');
-  var nameCopy = document.getElementById('nameCopy');
+  $('.datepicker').pickadate({
+    selectMonths: true,
+    selectYears: 120,
+    today: '',
+    min: new Date(1900,1,1),
+    max: true
+  });
+  var name = document.getElementById('firstName');
+  var curp = document.getElementById('curp');
   name.addEventListener('keyup', copy);
   var badWords = ['culo', 'loco', 'wuey', 'roba'];
   var grosero = false;
 
   function copy() {
-    nameCopy.value = name.value;
+    curp.value = name.value;
     badWords.forEach(function (word) {
       if(name.value.includes(word)) {
-        nameCopy.value = 'Grosero' //Aqui remplazar una de las letras por X
+        curp.value = 'Grosero' //Aqui remplazar una de las letras por X
       }
     })
   }
