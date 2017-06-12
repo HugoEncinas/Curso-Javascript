@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" name="curpForm">
       <div class="row">
         <div class="input-field col s4">
           <input id="firstName" type="text" value="" class="validate">
@@ -26,19 +26,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s4">
           <input id="birthday" type="date" class="datepicker">
           <label for="date">Birthday</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s4">
           <p>
-            <input class="with-gap" name="group1" type="radio" id="test3"  />
-            <label for="test3">Male</label>
+            <input class="with-gap" name="gender" type="radio" id="male"  />
+            <label for="male">Male</label>
           </p>
           <p>
-            <input class="with-gap" name="group1" type="radio" id="test4" />
-            <label for="test4">Female</label>
+            <input class="with-gap" name="gender" type="radio" id="female" />
+            <label for="female">Female</label>
           </p>
+          <p>
+            <input type="checkbox" class="filled-in" id="pregnant" disabled="disabled"/>
+            <label for="pregnant">Pregnant?</label>
+          </p>
+        </div>
+        <div class="input-field col s4">
+          <select id="state" class="browser-default">
+            <option value="" disabled selected>Choose your birth State</option>
+          </select>
+          <!-- <label>State</label> -->
         </div>
       </div>
       <div class="row">
