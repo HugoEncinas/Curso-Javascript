@@ -9,7 +9,18 @@
   <script src="tarea6.js"></script>
 </head>
 <body>
+
+<style>
+  input{
+    font-family: monospace;
+  }
+</style>
+
   <div class="row">
+    <div class="col s12 header">
+      <h4>CURP calculator</h4>
+      <p class="">*Disclaimer: This program doesn't calculate the <em>homoclave</em> (last 1-2 characters/digits)</p>
+    </div>
     <form class="col s12" name="curpForm">
       <div class="row">
         <div class="input-field col s4">
@@ -52,9 +63,20 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <input placeholder="CURP" id="curp" type="text" value="" class="validate">
           <label for="curp" class="active"></label>
+        </div>
+        <div class="input-field col s6">
+          <button id="curpSubmit" class="btn waves-effect waves-light" type="submit" name="action">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="curpTextArea" class="materialize-textarea"></textarea>
+          <label for="curpTextArea">CURP Object</label>
         </div>
       </div>
     </form>
