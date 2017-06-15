@@ -69,6 +69,7 @@ window.onload = function() {
     {text: "Querétaro", value: "QT"},
     {text: "San Luis Potosí", value: "SP"},
     {text: "Sinaloa", value: "SL"},
+    {text: "Sonora", value: "SR"},
     {text: "Tabasco", value: "TC"},
     {text: "Tlaxcala", value: "TL"},
     {text: "Tamaulipas", value: "TS"},
