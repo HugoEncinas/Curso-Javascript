@@ -13,10 +13,10 @@ window.onload = function() {
   var picker = $input.pickadate('picker');
   var pickerModal = document.getElementsByClassName('picker__holder');
   var curp = document.getElementById('curp');
-  curpForm.addEventListener('keyup', copy);
-  curpForm.addEventListener('click', copy);
+  curpForm.addEventListener('keyup', calculateCurp);
+  curpForm.addEventListener('click', calculateCurp);
   curpForm.addEventListener('submit', generateObject);
-  pickerModal[0].addEventListener('click', copy);
+  pickerModal[0].addEventListener('click', calculateCurp);
   var badWords = ['culo', 'loco', 'wuey', 'roba', 'pene'];
   var grosero = false;
   var pregnant = "no"
@@ -86,11 +86,11 @@ window.onload = function() {
   }
 
   //main function that updates the CURP value
-  function copy() {
-    c1 = lastNameP.value.substring(0,1).toUpperCase();
-    c2 = getFirstVowel(lastNameP.value).toUpperCase();
-    c3 = lastNameM.value.substring(0,1).toUpperCase();
-    c4 = firstName.value.substring(0,1).toUpperCase();
+  function calculateCurp() {
+    c1 = lastNameP.value.substring(0,1);
+    c2 = getFirstVowel(lastNameP.value);
+    c3 = lastNameM.value.substring(0,1);
+    c4 = firstName.value.substring(0,1);
     if (picker.get('select')!=null){
       year = picker.get('select').year;
       month = picker.get('select').month+1; //Plus 1 becuase months have zero-as-index
@@ -116,12 +116,12 @@ window.onload = function() {
     if (c9 == "") {
       c9 = "??";
     }
-    c10 = getFirstConsonant(lastNameP.value).toUpperCase();
-    c11 = getFirstConsonant(lastNameM.value).toUpperCase();
-    c12 = getFirstConsonant(firstName.value).toUpperCase();
+    c10 = getFirstConsonant(lastNameP.value);
+    c11 = getFirstConsonant(lastNameM.value);
+    c12 = getFirstConsonant(firstName.value);
 
     // console.log(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12);
-    curpString = c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12;
+    curpString = (c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12).toUpperCase();
 
     //Replaces the second letter of a potential censored word with an X
     badWords.forEach(function (word) {
